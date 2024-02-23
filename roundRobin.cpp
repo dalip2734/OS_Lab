@@ -1,4 +1,4 @@
-// C++ Program to implement Round Robin
+// implementing Round Robin
 // Scheduling CPU Algorithm
 
 #include <iostream>
@@ -7,7 +7,7 @@ int main()
 {
     int i, n, time, remain, temps = 0, time_quantum;
     int wt = 0, tat = 0;
-    cout << "Enter the total number of process=" << endl;
+    cout << "Enter the total number of process=";
     cin >> n;
     remain = n;
     int at[n];
@@ -17,13 +17,13 @@ int main()
     cout << "Enter the Arrival time, Burst time for All the processes" << endl;
     for (i = 0; i < n; i++)
     {
-        cout << "Arrival time for process " << i + 1 << endl;
+        cout << "Arrival time for process " << i + 1 <<"=";
         cin >> at[i];
-        cout << "Burst time for process " << i + 1 << endl;
+        cout << "Burst time for process " << i + 1 <<"=";
         cin >> bt[i];
         rt[i] = bt[i];
     }
-    cout << "Enter the value of time QUANTUM:" << endl;
+    cout << "Enter the value of time QUANTUM:=";
     cin >> time_quantum;
     cout << "\n\nProcess\t:Turnaround Time:Waiting Time\n\n";
     for (time = 0, i = 0; remain != 0;)
@@ -44,7 +44,7 @@ int main()
         if (rt[i] == 0 && temps == 1)
         {
             remain--;
-            // Desplaying the result of wating, turn around time:
+            // Displaying the result of waiting, turn around time:
             printf("Pr.{%d}\t:\t%d\t:\t%d\n", i + 1, time - at[i], time - at[i] - bt[i]);
             cout << endl;
 
